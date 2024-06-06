@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="card__list">
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+      <li class="card__container">
+        <img src="" alt="" class="card__picture" />
+        <span class="card__text"></span>
+      </li>
+    </ul>
+    <div class="text__container hide">
+      К сожалению, оплата возможна только онлайн-переводом (можно при получении)
+      Скажите, пожалуйста,будет такая возможность?
+    </div>
+    <div class="success__container hide">
+      <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+      <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill="white"
+          d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm-55.808 536.384-99.52-99.584a38.4 38.4 0 1 0-54.336 54.336l126.72 126.72a38.272 38.272 0 0 0 54.336 0l262.4-262.464a38.4 38.4 0 1 0-54.272-54.336L456.192 600.384z"
+        />
+      </svg>
+      <span>Скопировано)</span>
+    </div>
+    <script>
+      function fallbackCopyTextToClipboard(text) {
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+
+        // Avoid scrolling to bottom
+        textArea.style.top = "0";
+        textArea.style.left = "0";
+        textArea.style.position = "fixed";
+
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+
+        try {
+          var successful = document.execCommand("copy");
+          var msg = successful ? "successful" : "unsuccessful";
+          console.log("Fallback: Copying text command was " + msg);
+        } catch (err) {
+          console.error("Fallback: Oops, unable to copy", err);
+        }
+
+        document.body.removeChild(textArea);
+      }
+      function copyTextToClipboard(text) {
+        if (!navigator.clipboard) {
+          fallbackCopyTextToClipboard(text);
+          return;
+        }
+        navigator.clipboard.writeText(text).then(
+          function () {
+            console.log("Async: Copying to clipboard was successful!");
+          },
+          function (err) {
+            console.error("Async: Could not copy text: ", err);
+          }
+        );
+      }
+      const texts = [
+        {
+          name: "Оплата переводом((",
+          pic: "cherry.jpg",
+          text: `К сожалению, оплата возможна только онлайн-переводом (можно при получении)
+
+Скажите, пожалуйста,будет такая возможность?`,
+        },
+        {
+          name: "Доставочку?)",
+          pic: "kiwi.jpg",
+          text: `Сергей , добрый день!🥝
+
+Компания PLOD - менеджер Анна)🥝
+
+Скажите, пожалуйста, Вам будет удобно принять доставку завтра?`,
+        },
+        {
+          name: "Доставки чаще",
+          pic: "apple.jpg",
+          text: `В ближайшее время мы запустим доставку чаще.
+
+Приносим извинения за временные неудобства 🙏🏻
+
+Ближайшая доставка будет в пятницу, скажите пожалуйста, Вам удобно будет ее принять?`,
+        },
+        {
+          name: "Уже едем 🚚",
+          pic: "banana.jpg",
+          text: `Добрый день!
+
+Ваш заказ собран, и направляется к вам🚚
+
+По весу:Арбуз- 12,900кг
+
+Сумма заказа:  рублей с доставкой`,
+        },
+        {
+          name: "Обратная связь 🍉",
+          pic: "watermelon.jpg",
+          text: `Спасибо за заказ 🧺 
+
+Будем благодарны за любую честную обратную связь!
+Нам очень важно Ваше мнение, наша команда старается для вас!
+
+Присоединяйтесь  к нашему телеграмм каналу:
+🍉https://t.me/plod_spb`,
+        },
+        {
+          name: "Лист ожидания 🍓",
+          pic: "strawberry.jpg",
+          text: `Зафиксировала ✅
+
+Поставим Вас в лист ожидания, как появится, мы Вам обязательно напишем🍓`,
+        },
+        {
+          name: "Ставим в лист ожидания",
+          pic: "grape.jpg",
+          text: `Александр , добрый день!🥝
+
+Компания PLOD - менеджер Анна)🍓
+
+Стоимость пока неизвестна, сможем сориентировать когда товар придет.
+Примерная цена 2100р-2500 р за литр.
+Ориентировочные сроки поставки середина июня, точную дату сказать пока не сможем. 
+
+Скажите, пожалуйста, на какое количество вас ставить в лист ожидания?`,
+        },
+        {
+          name: "Предупрежу о курьере 🚚",
+          pic: "mango.jpg",
+          text: `Ваш заказ принят ✅
+
+Я вас предупрежу, как курьер к вам будет выезжать.🚚`,
+        },
+        {
+          name: "Заказ оформлен ✅",
+          pic: "orange.jpg",
+          text: `Ваш заказ оформлен✅
+
+Благодарим за заказ, точная сумма будет известна после взвешивания, а перед отправкой мы свяжемся с Вами и оповестим, что курьер уже в пути.`,
+        },
+        {
+          name: "Ограничения по времени",
+          pic: "chernika.jpg",
+          text: `Если у вас есть какие-то ограничения по времени приема заказа, сообщите, пожалуйста 🙏🏻`,
+        },
+      ];
+      const cards = document.querySelectorAll(".card__container");
+      const textContainer = document.querySelector(".text__container");
+      const successContainer = document.querySelector(".success__container");
+      for (let i = 0; i < texts.length; i++) {
+        const textItem = texts[i];
+        const cardItem = cards.item(i);
+        const infoElement = document.createElement("svg");
+        infoElement.innerHTML = `<svg
+          class="card__info"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g
+            id="SVGRepo_tracerCarrier"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></g>
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M12 17V11"
+              stroke="green"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            ></path>
+            <circle
+              cx="1"
+              cy="1"
+              r="1"
+              transform="matrix(1 0 0 -1 11 9)"
+              fill="green"
+            ></circle>
+            <path
+              d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
+              stroke="green"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            ></path>
+          </g>
+        </svg>`;
+        cardItem.append(infoElement);
+        const pic = cardItem.querySelector(".card__picture");
+        pic.src = `./images/${textItem.pic}`;
+        const text = cardItem.querySelector(".card__text");
+        text.innerText = textItem.name;
+        cardItem.addEventListener("click", (e) => {
+          copyTextToClipboard(textItem.text);
+          textContainer.classList.remove("show");
+          textContainer.classList.add("hide");
+          document.body.style.paddingBottom = 0;
+          successContainer.classList.add("show");
+          successContainer.classList.remove("hide");
+          textContainer.innerText = textItem.text;
+          setTimeout(() => {
+            successContainer.classList.remove("show");
+            successContainer.classList.add("hide");
+          }, 1000);
+          console.log("copied");
+        });
+        infoElement.addEventListener("click", (e) => {
+          e.stopPropagation();
+          textContainer.innerText = textItem.text;
+          textContainer.classList.add("show");
+          textContainer.classList.remove("hide");
+          successContainer.classList.remove("show");
+          successContainer.classList.add("hide");
+          document.body.style.paddingBottom = `${
+            textContainer.getBoundingClientRect().height + 15
+          }px`;
+        });
+      }
+    </script>
+  </body>
+</html>

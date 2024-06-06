@@ -1,0 +1,88 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+/* Стили для списка карточек */
+.card__list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Промежуток между карточками */
+}
+
+/* Стили для контейнера карточки */
+.card__container {
+  width: 150px; /* Ширина карточки */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: relative;
+  display: grid;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Стили для изображения в карточке */
+.card__picture {
+  width: 100%; /* Заполнить всю ширину контейнера */
+  border-radius: 5px;
+  justify-self: center;
+}
+.card__text {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+.text__container {
+  background-color: green;
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 70%;
+  height: auto;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  transition: opacity 250ms linear;
+}
+.hide {
+  opacity: 0;
+}
+.show {
+  opacity: 1;
+}
+.success__container {
+  padding: 20px;
+  color: white;
+  background-color: green;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 250ms linear;
+}
+.success__container svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.card__info {
+  width: 30px;
+  height: 30px;
+  top: 5px;
+  right: 5px;
+  position: absolute;
+}
